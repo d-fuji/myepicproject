@@ -5,7 +5,6 @@ const { SystemProgram } = anchor.web3;
 const main = async () => {
   console.log("🚀 Starting test...")
 
-  // change: Provider => AnchorProvider
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 

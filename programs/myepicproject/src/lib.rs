@@ -7,13 +7,11 @@ pub mod myepicproject {
   use super::*;
   pub fn start_stuff_off(_ctx: Context<StartStuffOff>) -> Result <()> {
     let base_account = &mut _ctx.accounts.base_account;
-    // Initialize total_gifs.
     base_account.total_gifs = 0; 
     Ok(())
   }
 
   pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> Result <()> {
-    // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     let user = &mut ctx.accounts.user;
 
